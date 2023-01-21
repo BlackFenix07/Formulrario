@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="=width=device-width, initial-scale=1" />
+    <meta name="description" content="Mi primer formulario con sólo HTML" />
+    <meta name="robots" content="index,follow" />
+    <title>Registro</title>
+    <style>
+        body {
+            background: white;
+        }
+        
+        .return {
+            color: rgb(184, 39, 39);
+        }
+        
+        .input {
+            background: white;
+        }
+        
+        .select {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="" class="return">Página principal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Regístrate</h1>
+            <form>
+                <div>
+                    <label>Nombre completo</label>
+                    <input class="input" type="text" spellcheck="true" name="name" autocomplete="name" autofocus required />
+                </div>
+                <div>
+                    <label>Tipo de documento</label>
+                    <select class="select" required>
+                        <option value="TI">Tarjeta de identidad</option>
+                        <option value="CC">Cédula de ciudadanía</option>
+                        <option value="CE">Cédula de extranjería</option>
+                        <option value="PA">Pasaporte</option>
+                    </select>
+                    <input class="input" type="number" autocomplete="on" required />
+                </div>
+                <div>
+                    <label>Fecha de expedición del documento</label>
+                    <input class="input" type="date" name="expires_date_of_the_document" required />
+                </div>
+                <div>
+                    <label>Lugar de expedición del documento</label>
+                    <select class="select" required>
+                        <option value="Bogotá">Bogotá</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Manizales">Manizales</option>
+                        <option value="Medellín">Medellín</option>
+                        <option value="Pereira">Pereira</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Fecha de nacimiento</label>
+                    <input class="input" type="date" name="birth_date" />
+                </div>
+                <div>
+                    <label>Lugar de nacimiento</label>
+                    <input class="input" type="text" list="birth_place" placeholder="Selecciona" />
+                    <datalist id="birth_place">
+                        <option value="Cali">Cali</option>
+                        <option value="Manizales">Manizales</option>
+                        <option value="Medellín">Medellín</option>
+                    </datalist>
+                </div>
+                <div>
+                    <label>Teléfono</label>
+                    <select class="select" required>
+                        <option value="+1">+1</option>
+                        <option value="+33">+33</option>
+                        <option value="+34">+34</option>
+                        <option value="+39">+39</option>
+                        <option value="+57">+57</option>
+                    </select>
+                    <input class="input" type="number" autocomplete="on" required />
+                </div>
+                <div>
+                    <label>Correo electrónico</label>
+                    <input class="input" type="email" autocomplete="email" required />
+                </div>
+                <div>
+                    <label>Asunto</label>
+                    <input class="input" type="text" required />
+                </div>
+                <div>
+                    <label>Mensaje</label><br/>
+                    <textarea name="message" cols="30" rows="15" placeholder="Escribe tu mensaje" minlength="0" maxlength="500" autocomplete="on"></textarea>
+                </div>
+                <div>
+                    <p>Tienes tarjeta cash?</p>
+                    <label><input class="input" type="radio" name="cash_card" value="yes" />Sí</label>
+                    <label><input class="input" type="radio" name="cash_card" value="no" />No</label>
+                    <label><input class="input" type="radio" name="cash_card" />Deseo adquirirla</label>
+                    <p>En caso de contar con esta tarjeta, adjunta el certificado:</p>
+                    <label>Seleccionar archivo:</label>
+                    <input class="input" type="file" multiple accept=".pdf, .png" />
+                </div><br/>
+                <div>
+                    <label>Selecciona tu color favorito:</label>
+                    <input class="input" type="color" name="favorite_color" value="#00FFFB" />
+                </div><br/>
+                <div>
+                    <label>Déjanos tu comentario</label><br/>
+                    <textarea name="comment" cols="30" rows="15" placeholder="Escribe tu comentario" minlength="0" maxlength="250" autocomplete="on"></textarea>
+                </div><br/>
+                <div>
+                    <fieldset>
+                        <legend>Suscríbete a nuestro canal</legend>
+                        <input class="input" type="email" name="email_for_canal" placeholder="example@gmail.com" />
+                        <button type="button">Enviar</button>
+                    </fieldset>
+                </div><br/>
+                <div>
+                    <label><input class="input" type="checkbox" />Acepto los términos y condiciones.</label>
+                </div><br/>
+                <button type="submit">Registrarse</button>
+                <button type="reset">Limpiar todo</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
